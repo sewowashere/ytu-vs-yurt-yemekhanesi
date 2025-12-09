@@ -35,10 +35,10 @@ app.get('/api/menuler', async (req, res) => {
         // Okul API'si YYYYMM formatı istiyor (örn: 202512)
         const apiTarihParametresi = `${yil}${ay}`; 
         // Okul listesinden arama yaparken DD-MM-YYYY formatı lazım (örn: 06-12-2025)
-        //const aranacakTarihFormat = `${gun}-${ay}-${yil}`; 
-        //5 aralık gecekodunda 00.23 dakikasında kod hazırdı.
+        const aranacakTarihFormat = `${gun}-${ay}-${yil}`;
+        // 5 aralık gecekodunda 00.23 dakikasında kod hazırdı.
         // o yuzden calisiyor mu kontrol edemedigim icin alttaki kod satiriyle denedim:
-        const aranacakTarihFormat = '05-12-2025';
+        // const aranacakTarihFormat = '05-12-2025';
 
         console.log(`🔎 ISTEK geldi. Tarih: ${aranacakTarihFormat}`);
 
